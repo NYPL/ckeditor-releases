@@ -1,25 +1,10 @@
 /*
-Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license
 */
 
-figure.caption {
-	text-align: center;
-	border: solid 1px #ccc;
-	border-radius: 2px;
-	background: rgba(0,0,0,0.05);
-	padding: 10px;
-	margin: 10px 20px;
-	display: block; /* For IE8 */
-}
-
-figure.caption figcaption {
-	text-align: center;
-	display: block; /* For IE8 */
-}
-
 .cke_widget_wrapper:hover:after {
-	content: "id: " attr(data-widget-id);
+	content: "id: " attr(data-cke-widget-id);
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -29,4 +14,22 @@ figure.caption figcaption {
 	border-radius: 2px;
 	color: #BBB;
 	font: bold 10px sans-serif;
+}
+
+.align-left {
+	float: left;
+	margin-right: 20px;
+}
+
+.align-right {
+	float: right;
+	margin-left: 20px;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-center > figure {
+	display: inline-block;
 }
