@@ -5,7 +5,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 CKEDITOR.plugins.setLang( 'image2', 'tt', {
 	alt: 'Альтернатив текст',
 	btnUpload: 'Серверга җибәрү',
-	captioned: 'Captioned image', // MISSING
+	captioned: 'Исеме куелган рәсем',
+	captionPlaceholder: 'Исем',
 	infoTab: 'Рәсем тасвирламасы',
 	lockRatio: 'Lock Ratio', // MISSING
 	menu: 'Рәсем үзлекләре',
