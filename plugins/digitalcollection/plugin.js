@@ -121,11 +121,7 @@ CKEDITOR.plugins.add('digitalcollection', {
       editables: {
         caption: {
           selector: '.digcol-caption',
-          allowedContent: 'strong em' +
-          'div(digcol-image,inline,align-left,align-right,align-center);' +
-          'figure(caption);a[!data-url];img[!data-id];' +
-          'figcaption(digcol-caption);',
-          requiredContent: 'div(digcol-image)',
+          allowedContent: 'strong em;a[!href]',
         }
       },
       upcast: function (element) {

@@ -121,7 +121,7 @@ CKEDITOR.plugins.add('catalogimage', {
       editables: {
         caption: {
           selector: '.catalog-caption',
-          allowedContent: 'strong em;figure(catalog-image,caption);a;img;figcaption(catalog-caption);'
+          allowedContent: 'strong em;a[!href]'
         }
       },
       upcast: function (element) {
