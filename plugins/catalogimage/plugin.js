@@ -121,13 +121,9 @@ CKEDITOR.plugins.add('catalogimage', {
       editables: {
         caption: {
           selector: '.catalog-caption',
-          allowedContent: 'strong em'
+          allowedContent: 'strong em;figure(catalog-image,caption);a;img;figcaption(catalog-caption);'
         }
       },
-      allowedContent:
-        // 'div(catalog-image,inline,align-left,align-right,align-center);' +
-        'figure(catalog-image,caption);a;img;figcaption(catalog-caption);',
-      // requiredContent: 'div(catalog-image)',
       upcast: function (element) {
         return element.name === 'figure' && element.hasClass('catalog-image');
       }
