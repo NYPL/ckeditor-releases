@@ -113,7 +113,7 @@ CKEDITOR.plugins.add('digitalcollection', {
       template:
         '<div class="digcol-image">' +
           '<figure class="caption digcol-image">' +
-            '<a href="">' +
+            '<a href="" data-url="">' +
             '<img data-id src="" width="300px" alt=""/></a>' +
             '<figcaption class="digcol-caption">Caption</figcaption>' +
           '</figure>' +
@@ -125,9 +125,9 @@ CKEDITOR.plugins.add('digitalcollection', {
         }
       },
       allowedContent:
-        'div(!digcol-image,inline,align-left,align-right,align-center);' +
-        'figure(!caption);a(!data-url);img(!data-id);' +
-        'figcaption(!digcol-caption);',
+        'div(digcol-image,inline,align-left,align-right,align-center);' +
+        'figure(caption);a[!data-url];img[!data-id];' +
+        'figcaption(digcol-caption);',
       requiredContent: 'div(digcol-image)',
       upcast: function (element) {
         return element.name === 'div' && element.hasClass('digcol-image');

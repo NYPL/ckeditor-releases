@@ -125,8 +125,8 @@ CKEDITOR.plugins.add('catalogimage', {
         }
       },
       allowedContent:
-        // 'div(!catalog-image,inline,align-left,align-right,align-center);' +
-        'figure(!catalog-image, caption);a;img;figcaption(!catalog-caption);',
+        // 'div(catalog-image,inline,align-left,align-right,align-center);' +
+        'figure(catalog-image,caption);a;img;figcaption(catalog-caption);',
       // requiredContent: 'div(catalog-image)',
       upcast: function (element) {
         return element.name === 'figure' && element.hasClass('catalog-image');
