@@ -75,9 +75,9 @@ CKEDITOR.plugins.add('digitalcollection', {
         } else {
           img.setAttribute('data-id', this.data.img_id);
           img.setAttribute('data-cke-saved-src',
-            'http://images.nypl.org/index.php?id=' + this.data.img_id + '&t=w');
+            'https://images.nypl.org/index.php?id=' + this.data.img_id + '&t=w');
           img.setAttribute('src',
-            'http://images.nypl.org/index.php?id=' + this.data.img_id + '&t=w');
+            'https://images.nypl.org/index.php?id=' + this.data.img_id + '&t=w');
         }
 
         if (this.data.img_url === '') {
@@ -87,14 +87,14 @@ CKEDITOR.plugins.add('digitalcollection', {
           if (this.data.img_url) {
             img_url =
               this.data.img_url
-                .replace(/http:\/\/digitalcollections.nypl.org\/items\//, '');
+                .replace(/https:\/\/digitalcollections.nypl.org\/items\//, '');
           }
 
           link.setAttribute('data-url', img_url);
           link.setAttribute('data-cke-saved-href',
-            'http://digitalcollections.nypl.org/items/' + img_url);
+            'https://digitalcollections.nypl.org/items/' + img_url);
           link.setAttribute('href',
-            'http://digitalcollections.nypl.org/items/' + img_url);
+            'https://digitalcollections.nypl.org/items/' + img_url);
         }
 
         this.element.removeClass('inline');
@@ -114,14 +114,13 @@ CKEDITOR.plugins.add('digitalcollection', {
         '<div class="digcol-image">' +
           '<figure class="caption digcol-image">' +
             '<a href="" data-url="">' +
-            '<img data-id src="" width="300px" alt=""/></a>' +
+            '<img data-id="" src="" width="300px" alt=""/></a>' +
             '<figcaption class="digcol-caption">Caption</figcaption>' +
           '</figure>' +
         '</div>',
       editables: {
         caption: {
-          selector: '.digcol-caption',
-          allowedContent: 'strong em;a[!href]',
+          selector: '.digcol-caption'
         }
       },
       upcast: function (element) {
